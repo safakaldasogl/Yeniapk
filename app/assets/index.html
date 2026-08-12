@@ -8465,7 +8465,7 @@ input[type="range"].settings-slider::-webkit-slider-thumb {
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Dışa Aktar
         </button>
-        <label class="more-menu-item" style="cursor:pointer;" onclick="if(_isWebView()){event.preventDefault();closeDataMenu();openImportTextSheet();}">
+        <label class="more-menu-item" style="cursor:pointer;" onclick="closeDataMenu();">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           İçe Aktar
           <input type="file" accept=".json" onchange="importData(event);closeDataMenu()" style="display:none">
@@ -9537,7 +9537,7 @@ input[type="range"].settings-slider::-webkit-slider-thumb {
         <div class="settings-label">Veri</div>
         <button class="drawer-item" onclick="drawerGo(exportData)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>Dışa Aktar (JSON)</span></button>
         <button class="drawer-item" onclick="drawerGo(exportCSV)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span>CSV Aktar</span></button>
-      <button class="drawer-item" onclick="closeDrawer();if(_isWebView()){openImportTextSheet()}else{document.querySelector('#stabAbout input[type=file]').click()}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3m0 0 4 4m-4-4L8 7"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>İçe Aktar</span><input type="file" accept=".json" onchange="importData(event)" style="display:none"></button>
+      <button class="drawer-item" onclick="closeDrawer();document.querySelector('#stabAbout input[type=file]').click()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3m0 0 4 4m-4-4L8 7"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>İçe Aktar</span><input type="file" accept=".json" onchange="importData(event)" style="display:none"></button>
         <button class="drawer-item" onclick="drawerGo(shareList)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.3 10.8 7.4-3.6M8.3 13.2l7.4 3.6"/></svg><span>Listeyi Paylaş</span></button>
         <button class="drawer-item" onclick="drawerGo(openDataHealth)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 8-4-16-3 8H2"/></svg><span>Veri Sağlığı</span></button>
       </div>
